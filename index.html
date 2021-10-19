@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title> Dream Car right now</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">DreamCars</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            New car
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Search New Cars</a></li>
+                            <li><a class="dropdown-item" href="#">Popular Cars</a></li>
+                            <li><a class="dropdown-item" href="#">BS6 Cars</a></li>
+                            <li><a class="dropdown-item" href="#">Latest Cars</a></li>
+                            <li><a class="dropdown-item" href="#">Suggest Me a Car</a></li>
+                            <li><a class="dropdown-item" href="#">Offers and Discount<span
+                                        class="badge bg-danger badge bg-secondary">New</span></a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Service center</a></li>
+                            <li><a class="dropdown-item" href="#">Dealers</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-danger" type="submit">Search</button>
+                </form>
+                <div class="mx-2">
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#LoginModal">Login
+
+                    </button>
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#SignUpModal">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- LoginModal -->
+    <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="LoginModalLabel">Login to DreamCars</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--signup Modal -->
+    <div class="modal fade" id="SignUpModal" tabindex="-1" aria-labelledby="SignUpModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="SignUpModalLabel">Sign Up to DreamCars</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="fname">First name:</label>
+                            <input type="text" id="fname" name="fname"><br><br>
+                            <label for="lname">Last name:</label>
+                            <input type="text" id="lname" name="lname"><br>
+                            <br>
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cexampleInputPassword1" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="cexampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Create Account</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Offer!Offer!</strong> Diwali Offer is live...!
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+
+        <div class="container">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="3.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="container my-4">
+        <main>
+            <h1>Popular Cars</h1>
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">Maruti Swift</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title"><small class="text-muted fw-light"></small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li><img src="swift.jpg" width="100%" height="225" "></li>
+                     <li>5,000/Month<sup>*</sup></li>
+                      <li>4.2lac to 7.5 lac</li>
+                      
+                    </ul>
+                    <button type=" button" class="w-100 btn btn-lg btn-outline-danger">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="col">
+                        <div class="card mb-4 rounded-3 shadow-sm">
+                            <div class="card-header py-3">
+                                <h4 class="my-0 fw-normal">Tata Tigor</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title"><small class="text-muted fw-light"></small>
+                                </h1>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li><img src="tigor.jpg" width="100%" height="225" "></li>
+                         <li>4,234/Month<sup>*</sup></li>
+                          <li>5 lac to 9 lac</li>
+                          
+                        </ul>
+                        <button type=" button" class="w-100 btn btn-lg btn-outline-danger">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="col">
+                        <div class="card mb-4 rounded-3 shadow-sm">
+                            <div class="card-header py-3">
+                                <h4 class="my-0 fw-normal">Kia Seltos</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title"><small class="text-muted fw-light"></small>
+                                </h1>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li><img src="seltos.jpg" width="100%" height="225" "></li>
+                         <li>12,999/Month<sup>*</sup></li>
+                          <li>10 lac to 18 lac</li>
+                          
+                        </ul>
+                        <button type=" button" class="w-100 btn btn-lg btn-outline-danger">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">Maruti Baleno</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title"><small class="text-muted fw-light"></small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li><img src="baleno.jpg" width="100%" height="225" "></li>
+                     <li>5,596/Month<sup>*</sup></li>
+                      <li>6 lac to 9.5lac</li>
+                      
+                    </ul>
+                    <button type=" button" class="w-100 btn btn-lg btn-outline-danger">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="col">
+                        <div class="card mb-4 rounded-3 shadow-sm">
+                            <div class="card-header py-3">
+                                <h4 class="my-0 fw-normal">Hyundai Verna</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title"><small class="text-muted fw-light"></small>
+                                </h1>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li><img src="verna.jpeg" width="100%" height="225" "></li>
+                         <li>4,234/Month<sup>*</sup></li>
+                          <li>8 lac to 14 lac</li>
+                          
+                        </ul>
+                        <button type=" button" class="w-100 btn btn-lg btn-outline-danger">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="col">
+                        <div class="card mb-4 rounded-3 shadow-sm">
+                            <div class="card-header py-3">
+                                <h4 class="my-0 fw-normal">Tata Safari</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title"><small class="text-muted fw-light"></small>
+                                </h1>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li><img src="safari.jpeg" width="100%" height="225" "></li>
+                         <li>15,999/Month<sup>*</sup></li>
+                          <li>16 lac to 20 lac</li>
+                          
+                        </ul>
+                        <button type=" button" class="w-100 btn btn-lg btn-outline-danger">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!--content-->
+    <div class="container">
+        <div class=" row mb-2">
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">Tigor EV</strong>
+                        <h3 class="mb-0">Review</h3>
+                        <div class="mb-1 text-muted">Nov 12</div>
+                        <p class="card-text mb-auto">Electric cars are finally trickling down to the mass market. You no
+                            longer need to shell out over Rs 20 lakh to get your hands on one you can realistically use
+                            every day. Tata is spearheading this change. The Nexon EV is now India’s EV poster boy. </p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img class="bd-placeholder-img" width="250" height="250" src="tigorev.jpg" role="img"
+                            aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                            dy=".3em"></text></svg>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">Tata Punch</strong>
+                        <h3 class="mb-0">Review</h3>
+                        <div class="mb-1 text-muted">10 OCT</div>
+                        <p class="mb-auto">The Punch micro SUV has been launched as Tata’s entry-level SUV offering.
+
+                            Its introductory prices range from Rs 5.49 lakh to Rs 9.4 lakh (ex-showroom, India).
+
+                            It is offered in four variants, and each gets an optional feature pack for additional
+                            equipment.
+
+                        </p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img class="bd-placeholder-img" width="250" height="250" src="punch.jpg">
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class=" row mb-2">
+                <div class="col-md-6">
+                    <div
+                        class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <strong class="d-inline-block mb-2 text-primary">Skoda Octavia</strong>
+                            <h3 class="mb-0">Review</h3>
+                            <div class="mb-1 text-muted">Nov 12</div>
+                            <p class="card-text mb-auto">The Octavia nameplate has a cult following. It introduced
+                                performance, luxury, and practicality in a VFM package, making it a massive hit among
+                                enthusiasts and sensible buyers alike. The 2021 Octavia is different, though. AT least
+                                on paper. Like always, it comes across as luxurious and performance-oriented, but Skoda
+                                has scaled up the pricing considerably, taking away the VFM quotient. </p>
+                            <a href="https://www.cardekho.com/road-test/2021-skoda-octavia-first-drive-review-738.htm"
+                                class="stretched-link">Continue reading</a>
+                        </div>
+                        <div class="col-auto d-none d-lg-block">
+                            <img class="bd-placeholder-img my-5" width="250" height="250" src="octavia.jpg" role="img"
+                                aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                                focusable="false">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                                dy=".3em"></text></svg>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div
+                        class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <strong class="d-inline-block mb-2 text-primary">Volkswagen Vento
+                            </strong>
+                            <h3 class="mb-0">Review</h3>
+                            <div class="mb-1 text-muted">sept 12</div>
+                            <p class="card-text mb-auto">Volkswagen Vento 1.0 TSI Highline Plus AT Matt Edition Prices:
+                                The price of the Volkswagen Vento 1.0 TSI Highline Plus AT Matt Edition in Begusarai is
+                                Rs 13.34 Lakh (Ex-showroom). To know more about the Vento 1.0 TSI Highline Plus AT Matt
+                                Edition Images, Reviews, Offers & other details. </p>
+                            <a href="https://www.cardekho.com/overview/Volkswagen_Vento/Volkswagen_Vento_1.0_TSI_Highline_Plus_AT_Matt_Edition.htm"
+                                class="stretched-link">Continue reading</a>
+                        </div>
+                        <div class="col-auto d-none d-lg-block">
+                            <img class="bd-placeholder-img my-5" width="300" height="250" src="vento.jpeg" role="img"
+                                aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                                focusable="false">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                                dy=".3em"></text></svg>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <!--Footer-->
+        <div class="container">
+            <footer class="py-5">
+                <div class="row">
+                    <div class="col-4">
+                        <h5>OVERVIEW</h5>
+                        <ul class="nav flex-column">
+
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About us</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Privacy Policy</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Terms & Conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-4">
+                        <h5>OTHERS</h5>
+                        <ul class="nav flex-column">
+
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Advertise with Us</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Carrers</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Customer Care</a></li>
+
+                        </ul>
+                    </div>
+
+                    <div class="col-4">
+                        <h5>CONNECT WITH US</h5>
+                        <ul class="nav flex-column">
+
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">1800 200
+                                    30000(Toll-Free)</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">support@shivam.com</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Dealer solution </a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contact Us</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Feedback</a></li>
+                        </ul>
+                    </div>
+
+
+
+                    <div class="d-flex justify-content-between py-4 my-4 border-top">
+                        <p>© 2021 Company, Inc. All rights reserved.</p>
+                        <ul class="list-unstyled d-flex">
+                            <li class="ms-3"><a class="link-dark" href="https://www.facebook.com/home.php"><img
+                                        src="facebook.jpg" width="24" height="24"></a></li>
+                            <li class="ms-3"><a class="link-dark" href="https://www.instagram.com/"><img
+                                        src="instagram.jpg" width="24" height="24"></a></li>
+                            <li class="ms-3"><a class="link-dark" href="https://twitter.com/home?lang=en"><img
+                                        src="Twitter.jpg" width="24" height="24"></a></li>
+                        </ul>
+                    </div>
+            </footer>
+        </div>
+
+
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
